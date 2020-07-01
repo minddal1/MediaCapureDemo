@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MediaCaptureDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-v8-v4E">
+                                <rect key="frame" x="38" y="80" width="299" height="447"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xO2-4s-2OY" appends="YES" id="hks-Es-Mwz"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAW-pC-4hB">
+                                <rect key="frame" x="38" y="535" width="48" height="30"/>
+                                <state key="normal" title="Photos"/>
+                                <connections>
+                                    <action selector="photosBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ta-N8-pAK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww4-rS-b9s">
+                                <rect key="frame" x="303" y="28" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveTextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zc2-B3-9Bx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bU9-tm-hnV">
+                                <rect key="frame" x="283" y="605" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cU4-YG-0pG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIj-vf-xJm">
+                                <rect key="frame" x="297" y="535" width="40" height="30"/>
+                                <state key="normal" title="Video"/>
+                                <connections>
+                                    <action selector="videoBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wKK-Xk-tV6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write text to the image" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0HD-pr-w4W">
+                                <rect key="frame" x="38" y="28" width="172" height="34"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="0.01069029514" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="8gb-4a-GLU"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0HD-pr-w4W" firstAttribute="top" secondItem="Ww4-rS-b9s" secondAttribute="top" id="4Bj-Mr-b0p"/>
+                            <constraint firstItem="IxQ-v8-v4E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="4Yc-8Z-qk5"/>
+                            <constraint firstItem="kAW-pC-4hB" firstAttribute="top" secondItem="IxQ-v8-v4E" secondAttribute="bottom" constant="8" id="6oc-lZ-eID"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0HD-pr-w4W" secondAttribute="bottom" constant="605" id="9ph-un-B8x"/>
+                            <constraint firstItem="bU9-tm-hnV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="283" id="Af5-DT-jc7"/>
+                            <constraint firstItem="0HD-pr-w4W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="CCY-DS-ptk"/>
+                            <constraint firstItem="Ww4-rS-b9s" firstAttribute="leading" secondItem="0HD-pr-w4W" secondAttribute="trailing" constant="93" id="FEq-xm-yVb"/>
+                            <constraint firstItem="IxQ-v8-v4E" firstAttribute="trailing" secondItem="MIj-vf-xJm" secondAttribute="trailing" id="H3I-9A-zkj"/>
+                            <constraint firstItem="IxQ-v8-v4E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="K5U-q5-Q12"/>
+                            <constraint firstItem="IxQ-v8-v4E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K7F-B1-Uuv"/>
+                            <constraint firstItem="0HD-pr-w4W" firstAttribute="top" secondItem="kAW-pC-4hB" secondAttribute="bottom" constant="-537" id="LjB-mn-FzR"/>
+                            <constraint firstItem="bU9-tm-hnV" firstAttribute="top" secondItem="MIj-vf-xJm" secondAttribute="bottom" constant="40" id="Vba-F2-0Ut"/>
+                            <constraint firstItem="IxQ-v8-v4E" firstAttribute="leading" secondItem="kAW-pC-4hB" secondAttribute="leading" id="XOu-Gi-tHl"/>
+                            <constraint firstItem="IxQ-v8-v4E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cwD-HC-Tyx"/>
+                            <constraint firstItem="Ww4-rS-b9s" firstAttribute="top" secondItem="bU9-tm-hnV" secondAttribute="bottom" constant="-607" id="hol-3b-1W1"/>
+                            <constraint firstItem="bU9-tm-hnV" firstAttribute="trailing" secondItem="MIj-vf-xJm" secondAttribute="trailing" id="kEt-5d-XpR"/>
+                            <constraint firstItem="bU9-tm-hnV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="122.5" id="tbx-et-WTR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageTextField" destination="0HD-pr-w4W" id="u4M-bi-1w4"/>
+                        <outlet property="imageView" destination="IxQ-v8-v4E" id="agw-HD-4yS"/>
+                        <outlet property="saveTextBtn" destination="Ww4-rS-b9s" id="H3T-XP-HVa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xO2-4s-2OY">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="RSe-4j-6l4"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="116.49175412293854"/>
+        </scene>
+    </scenes>
+</document>
